@@ -23,22 +23,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="src/img/logo.svg" alt="Logo firmy ElecWind" />
-      </div>
-      <nav class="header__nav">
-        <ul>
-          <li><a aria-label="Strona główna" href="#">strona główna</a></li>
-          <li><a aria-label="Dla domu" href="#">dla domu</a></li>
-          <li><a aria-label="Dla firm" href="#">dla firm</a></li>
-          <li><a aria-label="Serwis" href="#">serwis</a></li>
-          <li><a aria-label="Kariera" href="#">kariera</a></li>
-          <li><a aria-label="Kontakt" href="#">kontakt</a></li>
-        </ul>
-      </nav>
-      <div class="header__button"><button>i ty zacznij być eko!</button></div>
-    </header>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__logo">
+          <a href="#">
+            <img src="src/img/logo.svg" alt="Logo firmy ElecWind" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li class="onClick">
+              <a aria-label="Strona główna" href="#">strona główna</a>
+            </li>
+            <li><a aria-label="Dla domu" href="#">dla domu</a></li>
+            <li><a aria-label="Dla firm" href="#">dla firm</a></li>
+            <li><a aria-label="Serwis" href="#">serwis</a></li>
+            <li><a aria-label="Kariera" href="#">kariera</a></li>
+            <li><a aria-label="Kontakt" href="#">kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="header__button"><button>i ty zacznij być eko!</button></div>
+      </header>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

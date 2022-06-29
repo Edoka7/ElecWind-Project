@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  padding: 0 20%;
+  background: #f3f3f3;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+  &__logo,
+  &__button {
+    flex-basis: 20%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      padding: 10px 0;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 25px;
+
+      li {
+        list-style-type: none;
+
+        a {
+          display: block;
+          height: 100%;
+          padding: 8px 8px;
+          color: #333;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          border-bottom: 2px #333 solid;
+          transition: color 0.3s, border-color 0.3s;
+
+          &:hover {
+            color: $main-color;
+            border-color: $main-color;
+          }
+        }
+
+        &.onClick {
+          a {
+            color: $main-color;
+            border-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    button {
+      padding: 10px 10px;
+      font-size: 1.4rem;
+      border: 2px #333 solid;
+      border-radius: 20px;
+      background: transparent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+      &:hover {
+        color: #fff;
+        border-color: $main-color;
+        background: $main-color;
+      }
+    }
+  }
+}

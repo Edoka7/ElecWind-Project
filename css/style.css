@@ -3,4 +3,123 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 80px;
+  padding: 0 20%;
+  background: #f3f3f3;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+.header__logo, .header__button {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+.header__logo a {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+.header__logo a img {
+  height: 100%;
+}
+.header__nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 25px;
+}
+.header__nav ul li {
+  list-style-type: none;
+}
+.header__nav ul li a {
+  display: block;
+  height: 100%;
+  padding: 8px 8px;
+  color: #333;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px #333 solid;
+  -webkit-transition: color 0.3s, border-color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
+}
+.header__nav ul li a:hover {
+  color: #0096ff;
+  border-color: #0096ff;
+}
+.header__nav ul li.onClick a {
+  color: #0096ff;
+  border-color: #0096ff;
+}
+.header__button button {
+  padding: 10px 10px;
+  font-size: 1.4rem;
+  border: 2px #333 solid;
+  border-radius: 20px;
+  background: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.header__button button:hover {
+  color: #fff;
+  border-color: #0096ff;
+  background: #0096ff;
 }/*# sourceMappingURL=style.css.map */
