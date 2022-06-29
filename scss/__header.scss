@@ -14,6 +14,7 @@
     align-items: center;
     flex-direction: row;
   }
+
   &__logo,
   &__button {
     flex-basis: 20%;
@@ -37,13 +38,14 @@
   }
 
   &__nav {
+    flex-basis: 80%;
     flex-grow: 1;
 
     ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding-right: 25px;
+      padding-right: 40px;
 
       li {
         list-style-type: none;
@@ -51,7 +53,7 @@
         a {
           display: block;
           height: 100%;
-          padding: 8px 8px;
+          padding: 8px 12px;
           color: #333;
           font-size: 1.4rem;
           text-transform: uppercase;
