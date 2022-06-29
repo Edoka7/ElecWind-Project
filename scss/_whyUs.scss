@@ -1,0 +1,23 @@
+.whyUs {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $main-darker-color, $main-color);
+  padding: 150px 15%;
+
+  &__title {
+    color: #fff;
+    @include section-title;
+  }
+
+  &__paragraph {
+    color: #fff;
+    @include section-paragraph;
+  }
+
+  &__motto {
+    margin: 100px 100px 0 0;
+    color: $main-lighter-color;
+    letter-spacing: 1px;
+    font-size: 7rem;
+    text-align: right;
+  }
+}

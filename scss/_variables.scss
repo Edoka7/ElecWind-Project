@@ -3,3 +3,20 @@ $main-lighter-color: #5ebbfd;
 $main-darker-color: #0354ab;
 
 $section-title-fz: 5rem;
+$section-paragraph-fz: 3rem;
+
+@mixin section-title {
+  margin: 50px 0;
+  letter-spacing: 1px;
+  font-size: $section-title-fz;
+  text-align: center;
+}
+
+@mixin section-paragraph {
+  margin: 50px auto;
+  width: 70%;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 130%;
+  font-size: $section-paragraph-fz;
+}

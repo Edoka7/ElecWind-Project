@@ -165,6 +165,7 @@ a {
   height: 70px;
   -webkit-filter: grayscale(0.5);
           filter: grayscale(0.5);
+  cursor: pointer;
 }
 .ourOffices__map img:nth-child(2) {
   top: 10%;
@@ -202,4 +203,34 @@ a {
   list-style-position: inside;
   direction: rtl;
   cursor: pointer;
+}
+
+.whyUs {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0354ab), to(#0096ff));
+  background: linear-gradient(to bottom, #0354ab, #0096ff);
+  padding: 150px 15%;
+}
+.whyUs__title {
+  color: #fff;
+  margin: 50px 0;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  text-align: center;
+}
+.whyUs__paragraph {
+  color: #fff;
+  margin: 50px auto;
+  width: 70%;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 130%;
+  font-size: 3rem;
+}
+.whyUs__motto {
+  margin: 100px 100px 0 0;
+  color: #5ebbfd;
+  letter-spacing: 1px;
+  font-size: 7rem;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */
