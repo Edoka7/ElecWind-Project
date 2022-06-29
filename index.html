@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <header class="header">
+      <div class="header__wrapper wrapper">
         <div class="header__logo">
           <a href="#">
             <img src="src/img/logo.svg" alt="Logo firmy ElecWind" />
@@ -43,9 +43,11 @@
           </ul>
         </nav>
         <div class="header__button"><button>i ty zacznij być eko!</button></div>
-      </header>
-      <main>
-        <section class="ourOffices">
+      </div>
+    </header>
+    <main>
+      <section class="ourOffices">
+        <div class="wrapper">
           <div class="ourOffices__map">
             <img src="src/img/ourOffices_Poland.svg" alt="" />
             <img src="src/img/ourOffices_windmill.svg" alt="" />
@@ -60,9 +62,11 @@
             <li>Warszawa</li>
             <li>Katowice</li>
           </ul>
-        </section>
-        <section class="whyUs">
-          <h2 class="whyUs__title">Dlaczego ElecWind?</h1>
+        </div>
+      </section>
+      <section class="whyUs">
+        <div class="wrapper">
+          <h2 class="whyUs__title">Dlaczego ElecWind?</h2>
 
           <p class="whyUs__paragraph">
             <strong>ElecWind</strong> to nowa firma multienergetyczna na polskim
@@ -75,13 +79,15 @@
             kosztów.
           </p>
 
-          <h3 class="whyUs__motto"><em>
-            Jesteśmy źródłem<br />
-            Twojej energii - eco energii!
-          </em></h2>
-        </section>
-      </main>
-    </div>
+          <h3 class="whyUs__motto">
+            <em>
+              Jesteśmy źródłem<br />
+              Twojej energii - eco energii!
+            </em>
+          </h3>
+        </div>
+      </section>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>

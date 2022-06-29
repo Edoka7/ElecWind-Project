@@ -21,7 +21,7 @@ h6 {
 }
 
 .wrapper {
-  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -31,6 +31,17 @@ a {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #f3f3f3;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,16 +55,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  padding: 0 15%;
-  background: #f3f3f3;
-  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
 }
 .header__logo, .header__button {
   -ms-flex-preferred-size: 20%;
@@ -142,14 +143,17 @@ a {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-  padding: 80px 15% 0;
+  padding: 80px 0 0;
   background: url("src/img/background elements/BGElem_1.svg") no-repeat center bottom, #eee;
+}
+.ourOffices .wrapper {
+  min-height: 100vh;
 }
 .ourOffices__map {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 18%;
+  top: 17%;
   left: 19%;
 }
 .ourOffices__map img {
@@ -159,6 +163,8 @@ a {
   width: 40%;
   top: 0;
   left: 0;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
 }
 .ourOffices__map img:nth-child(2), .ourOffices__map img:nth-child(3), .ourOffices__map img:nth-child(4) {
   width: 70px;
@@ -168,15 +174,15 @@ a {
   cursor: pointer;
 }
 .ourOffices__map img:nth-child(2) {
-  top: 10%;
+  top: 9%;
   left: 1%;
 }
 .ourOffices__map img:nth-child(3) {
-  top: 33%;
-  left: 28%;
+  top: 29%;
+  left: 27%;
 }
 .ourOffices__map img:nth-child(4) {
-  top: 59%;
+  top: 55%;
   left: 17%;
 }
 .ourOffices__title {
@@ -209,7 +215,7 @@ a {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#0354ab), to(#0096ff));
   background: linear-gradient(to bottom, #0354ab, #0096ff);
-  padding: 150px 15%;
+  padding: 150px 0;
 }
 .whyUs__title {
   color: #fff;
