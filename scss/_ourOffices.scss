@@ -1,0 +1,79 @@
+.ourOffices {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 80px 15% 0;
+  background: url("src/img/background elements/BGElem_1.svg") no-repeat center
+      bottom,
+    #eee;
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 18%;
+    left: 19%;
+
+    img {
+      position: absolute;
+
+      &:nth-child(1) {
+        width: 40%;
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        width: 70px;
+        height: 70px;
+        filter: grayscale(0.5);
+      }
+
+      &:nth-child(2) {
+        top: 10%;
+        left: 1%;
+      }
+
+      &:nth-child(3) {
+        top: 33%;
+        left: 28%;
+      }
+
+      &:nth-child(4) {
+        top: 59%;
+        left: 17%;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 12%;
+    right: 19%;
+    width: 35%;
+    color: $main-darker-color;
+    letter-spacing: 1px;
+    text-align: right;
+    font-size: $section-title-fz;
+  }
+
+  &__list {
+    position: absolute;
+    top: 28%;
+    right: 19%;
+
+    li {
+      position: relative;
+      color: #333;
+      font-size: 4rem;
+      line-height: 130%;
+      text-align: right;
+      list-style-position: inside;
+      direction: rtl;
+      cursor: pointer;
+    }
+  }
+}
