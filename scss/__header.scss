@@ -47,24 +47,20 @@
       align-items: center;
       padding-right: 40px;
 
-      li {
-        list-style-type: none;
+      li a {
+        display: block;
+        height: 100%;
+        padding: 8px 12px;
+        color: #333;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px #333 solid;
+        transition: color 0.3s, border-color 0.3s;
 
-        a {
-          display: block;
-          height: 100%;
-          padding: 8px 12px;
-          color: #333;
-          font-size: 1.4rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-bottom: 2px #333 solid;
-          transition: color 0.3s, border-color 0.3s;
-
-          &:hover {
-            color: $main-color;
-            border-color: $main-color;
-          }
+        &:hover {
+          color: $main-color;
+          border-color: $main-color;
         }
 
         &.onClick {

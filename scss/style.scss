@@ -26,6 +26,10 @@ h6 {
   margin: 0 auto;
 }
 
+li {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -38,3 +42,4 @@ a {
 @import "_windmillTypes.scss";
 @import "_realizations.scss";
 @import "_clients.scss";
+@import "_footer.scss";
