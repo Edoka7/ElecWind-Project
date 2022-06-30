@@ -327,4 +327,57 @@ a {
 }
 .windmillTypes__photo img {
   width: 100%;
+}
+
+.realizations {
+  padding: 100px 0 50px;
+  min-height: 90vh;
+  background: url("src/img/background elements/BGElem_4.svg") no-repeat center top;
+}
+.realizations .wrapper {
+  text-align: center;
+}
+.realizations__title {
+  margin: 50px 0;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  text-align: center;
+  color: #0354ab;
+}
+.realizations__slider {
+  position: relative;
+  margin: 0 auto;
+  width: 75%;
+  height: 550px;
+  background-color: red;
+  overflow: hidden;
+}
+.realizations__slider .sliderInfo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px 20px;
+  color: #fff;
+  text-align: left;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0096ff), to(transparent));
+  background: linear-gradient(to top, #0096ff, transparent);
+}
+.realizations__slider .sliderInfo__title {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+.realizations__slider .sliderInfo__paragraph {
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 1px;
+}
+.realizations__slider .sliderContainer img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #0096ff;
+}
+.realizations__slider .sliderContainer img.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
