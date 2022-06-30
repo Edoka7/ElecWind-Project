@@ -2,26 +2,28 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  position: relative;
   padding: 80px 0 0;
   background: url("src/img/background elements/BGElem_1.svg") no-repeat center
       bottom,
     #eee;
   & .wrapper {
+    position: relative;
     min-height: 100vh;
   }
   &__map {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 80vh;
+    max-height: 720px;
     position: absolute;
-    top: 17%;
-    left: 19%;
+    top: 0;
+    left: 0;
+    margin-top: 90px;
 
     img {
       position: absolute;
 
       &:nth-child(1) {
-        width: 40%;
+        width: 100%;
         top: 0;
         left: 0;
         filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
@@ -37,27 +39,30 @@
       }
 
       &:nth-child(2) {
-        top: 9%;
-        left: 1%;
+        top: 13%;
+        left: 2%;
       }
 
       &:nth-child(3) {
-        top: 29%;
-        left: 27%;
+        top: 40%;
+        left: 68%;
       }
 
       &:nth-child(4) {
-        top: 55%;
-        left: 17%;
+        top: 75%;
+        left: 41%;
       }
     }
   }
 
-  &__title {
+  &__texts {
     position: absolute;
-    top: 12%;
-    right: 19%;
-    width: 35%;
+    right: 5%;
+    margin-top: 50px;
+  }
+
+  &__title {
+    width: 100%;
     color: $main-darker-color;
     letter-spacing: 1px;
     text-align: right;
@@ -65,12 +70,8 @@
   }
 
   &__list {
-    position: absolute;
-    top: 28%;
-    right: 19%;
-
+    margin-top: 50px;
     li {
-      position: relative;
       color: #333;
       font-size: 4rem;
       line-height: 130%;
