@@ -177,6 +177,16 @@ a {
   -webkit-filter: grayscale(0.5);
           filter: grayscale(0.5);
   cursor: pointer;
+  -webkit-transition: -webkit-filter 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-filter 0.3s, -webkit-transform 0.3s;
+  transition: filter 0.3s, transform 0.3s;
+  transition: filter 0.3s, transform 0.3s, -webkit-filter 0.3s, -webkit-transform 0.3s;
+}
+.ourOffices__map img:nth-child(2).active, .ourOffices__map img:nth-child(3).active, .ourOffices__map img:nth-child(4).active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 .ourOffices__map img:nth-child(2) {
   top: 13%;
@@ -191,6 +201,13 @@ a {
   left: 41%;
 }
 .ourOffices__texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   right: 5%;
   margin-top: 50px;
@@ -203,9 +220,13 @@ a {
   font-size: 5rem;
 }
 .ourOffices__list {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: auto;
   margin-top: 50px;
 }
 .ourOffices__list li {
+  position: relative;
   color: #333;
   font-size: 4rem;
   line-height: 130%;
@@ -214,6 +235,39 @@ a {
   list-style-position: inside;
   direction: rtl;
   cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.ourOffices__list li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #0096ff;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.ourOffices__list li.active {
+  color: #0096ff;
+}
+.ourOffices__list li.active::after {
+  width: 100%;
+  color: #0096ff;
+}
+.ourOffices__list li.ourOffices__list-adress {
+  display: none;
+  margin: 10px 50px 0 0;
+  font-size: 2rem;
+  list-style-type: none;
+  cursor: default;
+}
+.ourOffices__list li.ourOffices__list-adress a {
+  color: #0096ff;
+}
+.ourOffices__list li.ourOffices__list-adress.showAdress {
+  display: block;
 }
 
 .whyUs {
@@ -485,7 +539,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 50px;
+  padding-right: 75px;
 }
 .footer__secondNav ul {
   font-size: 1.5rem;
@@ -511,7 +565,7 @@ a {
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
-.footer__secondNav ul li:hover a::after {
+.footer__secondNav ul li a:hover::after {
   width: 100%;
 }
 .footer__socials {

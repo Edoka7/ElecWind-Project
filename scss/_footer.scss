@@ -32,7 +32,7 @@
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 75px;
 
     ul {
       font-size: 1.5rem;
@@ -57,9 +57,10 @@
             background: #fff;
             transition: width 0.3s;
           }
-        }
-        &:hover a::after {
-          width: 100%;
+
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
     }
