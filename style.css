@@ -260,6 +260,7 @@ a {
   display: none;
   margin: 10px 50px 0 0;
   font-size: 2rem;
+  direction: ltr;
   list-style-type: none;
   cursor: default;
 }
@@ -268,6 +269,11 @@ a {
 }
 .ourOffices__list li.ourOffices__list-adress.showAdress {
   display: block;
+}
+
+.fa-arrow-up-right-from-square {
+  margin-left: 10px;
+  font-size: 1.75rem;
 }
 
 .whyUs {
