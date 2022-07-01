@@ -26,33 +26,76 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      padding: 0 20px 20px;
+      padding: 20px 25px;
       color: #fff;
       text-align: left;
-      background: linear-gradient(to top, $main-color, transparent);
+      background: linear-gradient(
+        to top,
+        $main-color,
+        rgba(0, 150, 255, 0.8),
+        transparent
+      );
+      z-index: 2;
 
       &__title {
-        margin-bottom: 10px;
-        font-size: 3rem;
+        margin-bottom: 5px;
+        font-size: 2rem;
         letter-spacing: 1px;
       }
 
       &__paragraph {
-        font-size: 2rem;
+        font-size: 1.4rem;
         line-height: 120%;
         letter-spacing: 1px;
       }
-    }
 
-    .sliderContainer img {
-      display: none;
-      width: 100%;
-      height: 100%;
-      background: $main-color;
+      &__navBar {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
 
-      &.active {
-        display: block;
+        .sliderDot {
+          width: 8px;
+          height: 8px;
+          margin: 0 10px;
+          border-radius: 50%;
+          background: rgb(255, 255, 255, 0.5);
+          cursor: pointer;
+          transition: transform 0.5s, background-color 0.5s;
+
+          &.active {
+            transform: scale(1.5);
+            background: rgb(255, 255, 255, 1);
+          }
+        }
       }
     }
+
+    .sliderContainer {
+      height: 100%;
+      width: 100%;
+      background: $main-color;
+
+      img {
+        display: none;
+        height: 100%;
+        width: 100%;
+        background: $main-color;
+
+        &.active {
+          display: block;
+          animation: fadeIn 2s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

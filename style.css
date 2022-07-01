@@ -182,7 +182,7 @@ a {
   transition: filter 0.3s, transform 0.3s;
   transition: filter 0.3s, transform 0.3s, -webkit-filter 0.3s, -webkit-transform 0.3s;
 }
-.ourOffices__map img:nth-child(2).active, .ourOffices__map img:nth-child(3).active, .ourOffices__map img:nth-child(4).active {
+.ourOffices__map img:nth-child(2).active, .ourOffices__map img:nth-child(2):hover, .ourOffices__map img:nth-child(3).active, .ourOffices__map img:nth-child(3):hover, .ourOffices__map img:nth-child(4).active, .ourOffices__map img:nth-child(4):hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
   -webkit-transform: scale(1.3);
@@ -252,7 +252,7 @@ a {
 .ourOffices__list li.active {
   color: #0096ff;
 }
-.ourOffices__list li.active::after {
+.ourOffices__list li.active::after, .ourOffices__list li:nth-child(odd):hover, .ourOffices__list li:nth-child(odd):hover::after {
   width: 100%;
   color: #0096ff;
 }
@@ -418,32 +418,83 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 20px 20px;
+  padding: 20px 25px;
   color: #fff;
   text-align: left;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0096ff), to(transparent));
-  background: linear-gradient(to top, #0096ff, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#0096ff), color-stop(rgba(0, 150, 255, 0.8)), to(transparent));
+  background: linear-gradient(to top, #0096ff, rgba(0, 150, 255, 0.8), transparent);
+  z-index: 2;
 }
 .realizations__slider .sliderInfo__title {
-  margin-bottom: 10px;
-  font-size: 3rem;
+  margin-bottom: 5px;
+  font-size: 2rem;
   letter-spacing: 1px;
 }
 .realizations__slider .sliderInfo__paragraph {
-  font-size: 2rem;
+  font-size: 1.4rem;
   line-height: 120%;
   letter-spacing: 1px;
 }
+.realizations__slider .sliderInfo__navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+.realizations__slider .sliderInfo__navBar .sliderDot {
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+}
+.realizations__slider .sliderInfo__navBar .sliderDot.active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: rgb(255, 255, 255);
+}
+.realizations__slider .sliderContainer {
+  height: 100%;
+  width: 100%;
+  background: #0096ff;
+}
 .realizations__slider .sliderContainer img {
   display: none;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background: #0096ff;
 }
 .realizations__slider .sliderContainer img.active {
   display: block;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .clients {
   padding-bottom: 50px;
 }
