@@ -164,4 +164,26 @@ sliderNavContainer.addEventListener("click", (e) => changeDot(e));
 createSliderNav();
 
 renderPhoto();
+
+// ==============================================
+
+// Slider
+
+const showElements = document.querySelectorAll("[data-showelement]");
+
+console.log(showElements);
+
+const fadeIn = () => {
+  showElements.forEach((section, index) => {
+    if (section.getBoundingClientRect().top <= window.innerHeight / 1.1) {
+      showElements[index].dataset.showelement = "";
+      showElements[index].classList.add("showElement");
+    }
+  });
+};
+
+window.addEventListener("scroll", fadeIn);
+
+fadeIn();
+
 // ==============================================

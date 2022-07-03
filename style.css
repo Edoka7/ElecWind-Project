@@ -474,8 +474,8 @@ a {
 }
 .realizations__slider .sliderContainer img.active {
   display: block;
-  -webkit-animation: fadeIn 2s;
-          animation: fadeIn 2s;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -659,4 +659,41 @@ a {
 }
 .footer__socials-icons a:hover {
   color: #fff;
+}
+
+[data-showelement=hide] {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+}
+
+.showElement {
+  -webkit-animation: showElement 1s;
+          animation: showElement 1s;
+}
+
+@-webkit-keyframes showElement {
+  from {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes showElement {
+  from {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
