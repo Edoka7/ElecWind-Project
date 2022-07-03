@@ -543,20 +543,20 @@ a {
   padding: 150px 0;
 }
 .whyUs__title {
-  color: #fff;
   margin: 50px 0;
   letter-spacing: 1px;
   font-size: 5rem;
   text-align: center;
+  color: #fff;
 }
 .whyUs__paragraph {
-  color: #fff;
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
   text-align: justify;
   line-height: 130%;
   font-size: 3rem;
+  color: #fff;
 }
 .whyUs__motto {
   margin: 100px 100px 0 0;
@@ -565,19 +565,85 @@ a {
   font-size: 7rem;
   text-align: right;
 }
+@media screen and (max-width: 1024px) {
+  .whyUs {
+    padding: 100px 0;
+  }
+  .whyUs__title {
+    font-size: 4rem;
+  }
+  .whyUs__paragraph {
+    font-size: 2.5rem;
+  }
+  .whyUs__motto {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .whyUs {
+    padding: 50px 0;
+  }
+  .whyUs__title {
+    font-size: 4rem;
+  }
+  .whyUs__paragraph {
+    font-size: 2.5rem;
+  }
+  .whyUs__motto {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .whyUs__motto {
+    margin: 100px 50px 0 0;
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .whyUs__motto {
+    margin: 100px 50px 0 0;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .whyUs {
+    padding: 50px 0;
+    min-height: 80vh;
+  }
+  .whyUs__title {
+    font-size: 3rem;
+  }
+  .whyUs__paragraph {
+    font-size: 2rem;
+  }
+  .whyUs__motto {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .whyUs__title {
+    font-size: 2.5rem;
+  }
+  .whyUs__paragraph {
+    font-size: 1.8rem;
+  }
+  .whyUs__motto {
+    font-size: 2rem;
+  }
+}
 
 .offers {
   min-height: 90vh;
   background: url("src/img/background elements/BGElem_2.svg") no-repeat center top, url("src/img/background elements/BGElem_3.svg") no-repeat center bottom, url("src/img/background elements/offer_bg_img.jpg") fixed center center;
 }
 .offers .wrapper {
-  height: 90vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -598,7 +664,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 75px 20px;
+  padding: 75px 15px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.3);
 }
@@ -609,16 +675,74 @@ a {
   height: 90%;
 }
 .offers__block-title {
-  margin: 20px 10px;
+  margin: 20px 0;
   color: #0096ff;
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
 }
 .offers__block-paragraph {
+  margin: 20p 0;
   color: #0354ab;
   text-align: center;
   font-size: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .offers__block {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    padding: 75px 12px;
+  }
+  .offers__block-icon {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .offers__block {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    padding: 75px 12px;
+  }
+  .offers__block-title {
+    font-size: 2.5rem;
+  }
+  .offers__block-icon {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .offers {
+    min-height: 100vh;
+  }
+  .offers .wrapper {
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 75px 0;
+  }
+  .offers__block {
+    width: 70%;
+    padding: 30px;
+    margin: 30px 0;
+  }
+  .offers__block-title {
+    margin: 40px 0 20px;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .offers__block {
+    width: 80%;
+  }
+  .offers__block-icon {
+    height: 100px;
+  }
+  .offers__block-title {
+    margin: 40px 0 20px;
+    font-size: 3rem;
+  }
 }
 
 .windmillTypes {
