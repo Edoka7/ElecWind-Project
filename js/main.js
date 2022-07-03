@@ -187,3 +187,16 @@ window.addEventListener("scroll", fadeIn);
 fadeIn();
 
 // ==============================================
+
+// Mobile menu nav bars
+
+const menu = document.querySelector(".header__nav");
+const menuBars = document.querySelector(".header__nav-mobileBars");
+const menuBg = document.querySelector(".header__nav-mobileBg");
+
+menu.addEventListener("click", () => {
+  menuBars.classList.toggle("activeMenu");
+  menuBg.classList.toggle("activeMenu");
+});
+
+// ==============================================

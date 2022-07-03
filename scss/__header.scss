@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    height: 80px;
   }
 
   &__logo,
@@ -30,6 +31,7 @@
       width: 100%;
       height: 100%;
       padding: 10px 0;
+      text-align: center;
 
       img {
         height: 100%;
@@ -90,6 +92,202 @@
         border-color: $main-color;
         background: $main-color;
       }
+    }
+  }
+  &__button-mobile {
+    display: none;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    button {
+      padding: 10px 10px;
+      font-size: 1.4rem;
+      border: 2px #333 solid;
+      border-radius: 20px;
+      background: transparent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+      &:hover {
+        color: #fff;
+        border-color: $main-color;
+        background: $main-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktop-media) {
+    &__button {
+      button {
+        padding: 10px 5px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $small-screen-media) {
+    &__logo {
+      height: 70px;
+    }
+
+    &__nav {
+      ul {
+        padding-right: 20px;
+
+        li a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    &__button {
+      button {
+        font-size: 1.2rem;
+
+        &:hover {
+          color: #fff;
+          border-color: $main-color;
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablets-media) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #f3f3f3;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    &__nav {
+      flex-basis: 35px;
+      flex-grow: 0;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 30px;
+      height: 26px;
+      cursor: pointer;
+
+      &-mobileBars {
+        width: 35px;
+        height: 2px;
+        background: #333;
+        z-index: 1;
+        transition: transform 0.3s;
+
+        &::before {
+          content: "";
+          display: block;
+          transform: translateY(-10px);
+          height: 2px;
+          background: #333;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          transform: translateY(9px);
+          height: 2px;
+          background: #333;
+        }
+
+        &.activeMenu {
+          transform: rotate(45deg);
+          background: #fff;
+
+          &::before {
+            display: none;
+            background: #fff;
+          }
+
+          &::after {
+            transform: rotate(-90deg);
+            background: #fff;
+          }
+        }
+      }
+
+      &-mobileBg {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba($main-color, 0.9);
+        backdrop-filter: blur(2px);
+
+        &.activeMenu {
+          display: block;
+        }
+      }
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding-right: 0;
+        z-index: 1;
+
+        li {
+          width: 50%;
+          text-align: center;
+
+          a {
+            padding: 20px 0;
+            font-size: 2rem;
+            color: #fff;
+            border-color: #fff;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+
+            &:hover {
+              opacity: 1;
+              color: #fff;
+              border-color: #fff;
+            }
+          }
+
+          &:last-child a {
+            border: none;
+          }
+        }
+      }
+    }
+
+    &__button {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        padding: 10px 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-media) {
+    &__logo {
+      a {
+        padding: 10px 20px;
+      }
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__button-mobile {
+      display: flex;
     }
   }
 }
