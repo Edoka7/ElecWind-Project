@@ -6,7 +6,7 @@
   height: 80px;
   background: #f3f3f3;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2;
 
   &__wrapper {
     display: flex;
@@ -163,7 +163,6 @@
     height: 80px;
     background: #f3f3f3;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
 
     &__nav {
       flex-basis: 35px;
@@ -180,7 +179,6 @@
         width: 35px;
         height: 2px;
         background: #333;
-        z-index: 1;
         transition: transform 0.3s;
 
         &::before {
@@ -236,7 +234,6 @@
         width: 100%;
         height: 100vh;
         padding-right: 0;
-        z-index: 1;
 
         li {
           width: 50%;
@@ -270,7 +267,7 @@
       justify-content: flex-end;
 
       button {
-        padding: 10px 10px;
+        padding: 10px;
       }
     }
   }
@@ -282,12 +279,23 @@
       }
     }
 
+    &__nav {
+      ul li a {
+        font-size: 1.75rem;
+      }
+    }
+
     &__button {
       display: none;
     }
 
     &__button-mobile {
       display: flex;
+
+      button {
+        font-size: 1.2rem;
+        padding: 8px;
+      }
     }
   }
 }

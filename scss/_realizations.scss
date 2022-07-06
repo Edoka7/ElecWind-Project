@@ -34,7 +34,7 @@
         rgba(0, 150, 255, 0.8),
         transparent
       );
-      z-index: 2;
+      z-index: 1;
 
       &__title {
         margin-bottom: 5px;
@@ -119,6 +119,10 @@
   }
 
   @media screen and (max-width: $mobile-media) {
+    &__title {
+      font-size: 2.25rem;
+    }
+
     &__slider {
       width: 100%;
       height: 40vh;
