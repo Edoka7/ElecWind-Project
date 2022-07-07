@@ -8,8 +8,9 @@
     display: flex;
     flex-grow: 1;
     margin-top: 80px;
+    overflow: hidden;
 
-    .for-house {
+    .for-bussines {
       display: flex;
       flex-grow: 1;
       justify-content: center;
@@ -89,7 +90,7 @@
 
   @media screen and (max-width: $desktop-media) {
     main {
-      .for-house {
+      .for-bussines {
         &__paragraph {
           font-size: 1.5rem;
         }
@@ -99,7 +100,7 @@
 
   @media screen and (max-width: $small-screen-media) {
     main {
-      .for-house {
+      .for-bussines {
         &__title {
           font-size: 4rem;
         }
@@ -109,7 +110,7 @@
 
   @media screen and (max-width: $tablets-media) {
     main {
-      .for-house {
+      .for-bussines {
         flex-direction: column;
 
         &__image {
@@ -156,7 +157,7 @@
 
   @media screen and (max-width: $mobile-media) {
     main {
-      .for-house {
+      .for-bussines {
         flex-direction: column;
 
         &__title {
@@ -175,7 +176,7 @@
 
   @media screen and (max-width: 400px) {
     main {
-      .for-house {
+      .for-bussines {
         flex-direction: column;
 
         &__image {
