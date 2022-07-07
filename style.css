@@ -266,6 +266,7 @@ a {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     background: #fff;
+    z-index: 1;
   }
   .header__nav-mobileBars.activeMenu::before {
     display: none;
