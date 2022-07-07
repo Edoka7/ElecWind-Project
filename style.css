@@ -541,7 +541,7 @@ a {
     margin-top: 10px;
   }
   .ourOffices__texts li {
-    position: static;
+    position: relative;
   }
 }
 @media screen and (max-width: 500px) {
