@@ -172,15 +172,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ==============================================
 
-  // Slider
+  // Show sections
 
   const showSections = document.querySelectorAll("[data-showsection]");
 
+  let indexOfSections = showSections.length;
+
+  console.log(indexOfSections);
+
   const fadeIn = () => {
     showSections.forEach((section, index) => {
-      if (section.getBoundingClientRect().top <= window.innerHeight / 1.1) {
-        showSections[index].dataset.showelement = "";
-        showSections[index].classList.add("showElement");
+      if (indexOfSections > 0) {
+        if (section.getBoundingClientRect().top <= window.innerHeight / 1.2) {
+          if (section.dataset.showsection === "hide") {
+            indexOfSections--;
+          }
+          showSections[index].dataset.showsection = "";
+          showSections[index].classList.add("showElement");
+        }
+      } else {
+        window.removeEventListener("scroll", fadeIn);
       }
     });
   };
