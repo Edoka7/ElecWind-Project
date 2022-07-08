@@ -1,0 +1,94 @@
+.eco-info {
+  flex-grow: 1;
+  justify-content: center;
+
+  &__title {
+    @include section-title;
+    color: $main-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -500%;
+      left: 30%;
+      bottom: -30%;
+      height: 5px;
+      background: $main-color;
+    }
+  }
+
+  h2 {
+    @include section-title;
+    margin: 0 auto;
+    color: $main-color;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  &__paragraph {
+    @include section-paragraph;
+    margin-top: 10px;
+    color: $main-darker-color;
+    font-size: 1.8rem;
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    @include section-paragraph;
+    margin-top: 10px;
+    color: $main-darker-color;
+    font-size: 1.8rem;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  h2,
+  &__paragraph,
+  ul {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $desktop-media) {
+    &__paragraph {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: $small-screen-media) {
+    &__title {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h2,
+    &__paragraph,
+    ul {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: $mobile-media) {
+    &__title {
+      font-size: 2.25rem;
+      padding: 0 30px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    &__paragraph {
+      font-size: 1.15rem;
+    }
+  }
+}

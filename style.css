@@ -1403,7 +1403,6 @@ a {
   font-size: 3rem;
   color: #0354ab;
   font-size: 1.8rem;
-  position: relative;
 }
 @media screen and (max-width: 1200px) {
   .mainWrapper main .subpage__paragraph {
@@ -1641,6 +1640,104 @@ main .contact form .form__container textarea {
   }
   main .contact form {
     font-size: 1.25rem;
+  }
+}
+
+.eco-info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.eco-info__title {
+  margin: 50px 0;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  text-align: center;
+  color: #0096ff;
+  position: relative;
+}
+.eco-info__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -500%;
+  left: 30%;
+  bottom: -30%;
+  height: 5px;
+  background: #0096ff;
+}
+.eco-info h2 {
+  margin: 50px 0;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #0096ff;
+  font-size: 2.5rem;
+  text-align: left;
+}
+.eco-info__paragraph {
+  margin: 50px auto;
+  width: 80%;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 130%;
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #0354ab;
+  font-size: 1.8rem;
+}
+.eco-info__paragraph:last-of-type {
+  margin-bottom: 10px;
+}
+.eco-info ul {
+  margin: 50px auto;
+  width: 80%;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 130%;
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #0354ab;
+  font-size: 1.8rem;
+}
+.eco-info ul li {
+  list-style: disc;
+}
+.eco-info h2, .eco-info__paragraph,
+.eco-info ul {
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .eco-info__paragraph {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .eco-info__title {
+    font-size: 4rem;
+  }
+  .eco-info h2 {
+    font-size: 2rem;
+  }
+  .eco-info h2, .eco-info__paragraph,
+.eco-info ul {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .eco-info__title {
+    font-size: 2.25rem;
+    padding: 0 30px;
+  }
+  .eco-info h2 {
+    font-size: 1.5rem;
+  }
+  .eco-info__paragraph {
+    font-size: 1.15rem;
   }
 }
 
