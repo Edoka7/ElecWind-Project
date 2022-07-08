@@ -23,23 +23,12 @@
         flex-basis: 35%;
         position: relative;
         width: 50%;
+        box-shadow: -15px 15px 0 0 $main-color;
         z-index: 1;
-
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          transform: translate(20px, 20px);
-          background: $main-color;
-          z-index: -1;
-        }
 
         img {
           width: 100%;
+          aspect-ratio: 4/3;
         }
 
         &-blurred {
@@ -106,10 +95,7 @@
           position: relative;
           width: 100%;
           overflow: hidden;
-
-          &::before {
-            display: none;
-          }
+          box-shadow: none;
 
           img {
             width: 70%;
