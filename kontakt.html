@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dla domu - ElecWind</title>
+    <title>Kontakt - ElecWind</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,40 +64,47 @@
       </header>
 
       <main>
-        <div class="subpage" data-showsection="hide">
-          <div class="subpage__image">
-            <img
-              class="subpage__image-blurred"
-              src="src/img/for-house-photo.jpg"
-              alt=""
-            />
-            <img src="src/img/for-house-photo.jpg" alt="" />
-          </div>
-          <div class="subpage__texts">
-            <h1 class="subpage__title">Dla domu</h1>
-            <p class="subpage__paragraph">
-              W naszej ofercie znajdują się również rozwiązania dla osób
-              prywatnych. Możemy zamontować na Państwa posesji mały, ale bardzo
-              wydajną turbinę wiatrową, która zmieni w pełni Państwa życie. Gdy
-              słyszymy haslo elektrownia wiatrowa to mamy przed oczami wielkie
-              farmy z jeszcze większymi wiatrakami. Nasza firma oferuje również
-              takie elektrowanie w dużo mniejszej skali, w skali odpowiadającej
-              warunkom domowym. Takie przydomowe elektrownie wiatrowe
-              charakteryzują się niską mocą, która pokrywa zapotrzebowanie
-              gospodarstwa domowego – najczęściej ma około 3 – 5 kW, ale
-              spotykane są także przydomowe elektrownie wiatrowe generujące
-              10-50 kW, które pozwalają na odsprzedaż nadwyżki energii do sieci
-              energetycznej dla dodatkowych zysków. Aby zacząć produkować prąd z
-              wiatru na własny użytek, konieczne jest zamontowanie przydomowej
-              elektrowni wiatrowej stworzonej z myślą o użytku przez klienta
-              indywidualnego. Aktualnie nasza frima zajmuje się
-              zaprojektowaniem, sprzedażą oraz montażem takich przydomowych
-              elektrownii wiatrowych. Montaż przydomowej elektrowni wiatrowej
-              może być przyszłościową inwestycją, która w obecnych czasach, gdy
-              ceny prądu stale rosną, pozwala na częściowe uniezależnienie się
-              od zakładów energetycznych.
-            </p>
-          </div>
+        <div class="contact" data-showsection="hide">
+          <h1 class="contact__title">Kontakt</h1>
+          <form>
+            <div class="form__container">
+              <label for="name">Imie i nazwisko:</label>
+              <input type="text" id="name" required />
+            </div>
+
+            <div class="form__container">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form__container">
+              <label for="subject">Temat:</label>
+              <input type="text" id="subject" required />
+            </div>
+
+            <div class="form__container">
+              <label for="category">Kategoria:</label>
+              <select name="category" id="category">
+                <option value="other">Inne</option>
+                <option value="products">Nasze produkty</option>
+                <option value="assessment">Wycena naszych usług</option>
+                <option value="montage">Montaż nowych urządzeń</option>
+                <option value="service">Serwis</option>
+                <option value="complaint">Reklamacja</option>
+              </select>
+            </div>
+
+            <div class="form__container">
+              <label for="content">Treść wiadomości:</label>
+              <textarea
+                name="message"
+                id="content"
+                placeholder="Tutaj wprowadź swoją wiadomość..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Wyślij</button>
+          </form>
         </div>
       </main>
 

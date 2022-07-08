@@ -1,0 +1,135 @@
+main {
+  flex-grow: 1;
+  margin-top: 80px;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__title {
+      @include section-title;
+      color: $main-color;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -500%;
+        left: 30%;
+        bottom: -30%;
+        height: 5px;
+        background: $main-color;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 1.5rem;
+
+      .form__container {
+        display: flex;
+        margin: 10px 0;
+
+        label {
+          width: 130px;
+          display: inline-block;
+          text-align: right;
+          margin-right: 20px;
+          padding: 5px;
+          color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 500px;
+          padding: 5px;
+          border: 1px solid $main-color;
+          color: #333;
+        }
+
+        input {
+          border: none;
+          border-bottom: 1px solid $main-color;
+          color: #333;
+        }
+
+        textarea {
+          height: 200px;
+          text-align: left;
+          resize: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+          outline: 2px solid $main-lighter-color;
+          color: #333;
+        }
+      }
+
+      button {
+        align-self: flex-end;
+        padding: 10px 10px;
+        margin-top: 20px;
+        font-size: 1.4rem;
+        border: 2px $main-color solid;
+        color: $main-color;
+        border-radius: 20px;
+        background: transparent;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+        &:hover {
+          color: #fff;
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablets-media) {
+    .contact {
+      &__title {
+        font-size: 4rem;
+      }
+
+      form {
+        .form__container {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            text-align: left;
+          }
+
+          input,
+          select,
+          textarea {
+            width: 80vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-media) {
+    .contact {
+      &__title {
+        font-size: 2.25rem;
+      }
+
+      form {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
