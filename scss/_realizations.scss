@@ -137,6 +137,17 @@
         &__paragraph {
           display: none;
         }
+
+        &__navBar {
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+
+          .sliderDot {
+            width: 10px;
+            height: 10px;
+          }
+        }
       }
     }
   }

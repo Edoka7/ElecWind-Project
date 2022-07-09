@@ -971,6 +971,19 @@ a {
   .realizations__slider .sliderInfo__paragraph {
     display: none;
   }
+  .realizations__slider .sliderInfo__navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px;
+  }
+  .realizations__slider .sliderInfo__navBar .sliderDot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -1715,6 +1728,9 @@ main .contact form .form__container textarea {
   .eco-info__paragraph {
     font-size: 1.5rem;
   }
+  .eco-info ul {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 1024px) {
   .eco-info__title {
@@ -1737,6 +1753,9 @@ main .contact form .form__container textarea {
     font-size: 1.5rem;
   }
   .eco-info__paragraph {
+    font-size: 1.15rem;
+  }
+  .eco-info ul {
     font-size: 1.15rem;
   }
 }

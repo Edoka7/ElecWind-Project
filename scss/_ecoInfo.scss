@@ -59,6 +59,10 @@
     &__paragraph {
       font-size: 1.5rem;
     }
+
+    ul {
+      font-size: 1.5rem;
+    }
   }
 
   @media screen and (max-width: $small-screen-media) {
@@ -88,6 +92,10 @@
     }
 
     &__paragraph {
+      font-size: 1.15rem;
+    }
+
+    ul {
       font-size: 1.15rem;
     }
   }
