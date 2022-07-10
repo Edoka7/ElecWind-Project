@@ -51,6 +51,7 @@
       &__navBar {
         display: flex;
         justify-content: center;
+        position: relative;
         margin-top: 15px;
 
         .sliderDot {
@@ -66,6 +67,22 @@
             transform: scale(1.5);
             background: rgb(255, 255, 255, 1);
           }
+        }
+      }
+
+      .sliderInfo__keyInfo {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        i:first-child {
+          margin-right: 20px;
+        }
+
+        i:last-child {
+          margin-left: 20px;
         }
       }
     }

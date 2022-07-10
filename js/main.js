@@ -67,6 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
     city.addEventListener("click", (e) => checkClick(e));
   });
 
+  cityList.forEach((city) => {
+    city.addEventListener("focus", (e) => {
+      city.addEventListener("keydown", (key) => {
+        switch (key.keyCode) {
+          case 13:
+            checkClick(e);
+            break;
+          default:
+        }
+      });
+    });
+  });
+
   // ==============================================
 
   // Slider
@@ -108,6 +121,43 @@ document.addEventListener("DOMContentLoaded", () => {
         p: "Zlecenie, które realizowaliśmy na zlecenie firmy WindFarm na terenie Szwajcarii.",
       },
     ];
+
+    const sliderKeyControl = (e) => {
+      if (
+        checkSlider.getBoundingClientRect().bottom <= window.innerHeight ||
+        (checkSlider.getBoundingClientRect().top >= 0 &&
+          checkSlider.getBoundingClientRect().top <= window.innerHeight)
+      ) {
+        window.addEventListener("keydown", (e) => {
+          switch (e.key) {
+            case "ArrowLeft":
+              if (activeIndex <= 0) {
+                activeIndex = photos.length - 1;
+              } else {
+                activeIndex--;
+              }
+              console.log(activeIndex);
+              renderPhoto();
+              break;
+
+            case "ArrowRight":
+              if (activeIndex >= photos.length - 1) {
+                activeIndex = 0;
+              } else {
+                activeIndex++;
+              }
+              console.log(activeIndex);
+              renderPhoto();
+              break;
+            default:
+          }
+        });
+      }
+    };
+
+    window.addEventListener("scroll", sliderKeyControl);
+
+    sliderKeyControl();
 
     const createSliderNav = () => {
       photos.forEach((el) => {

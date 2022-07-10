@@ -896,6 +896,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   margin-top: 15px;
 }
 .realizations__slider .sliderInfo__navBar .sliderDot {
@@ -914,6 +915,19 @@ a {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   background: rgb(255, 255, 255);
+}
+.realizations__slider .sliderInfo .sliderInfo__keyInfo {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.realizations__slider .sliderInfo .sliderInfo__keyInfo i:first-child {
+  margin-right: 20px;
+}
+.realizations__slider .sliderInfo .sliderInfo__keyInfo i:last-child {
+  margin-left: 20px;
 }
 .realizations__slider .sliderContainer {
   height: 100%;
