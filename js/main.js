@@ -122,35 +122,37 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     ];
 
-    const sliderKeyControl = (e) => {
+    const sliderKeyControl = () => {
       if (
         checkSlider.getBoundingClientRect().bottom <= window.innerHeight ||
-        (checkSlider.getBoundingClientRect().top >= 0 &&
-          checkSlider.getBoundingClientRect().top <= window.innerHeight)
+        checkSlider.getBoundingClientRect().top <= window.innerHeight
       ) {
         window.addEventListener("keydown", (e) => {
-          switch (e.key) {
-            case "ArrowLeft":
+          switch (e.keyCode) {
+            case 37:
               if (activeIndex <= 0) {
                 activeIndex = photos.length - 1;
               } else {
                 activeIndex--;
               }
-              console.log(activeIndex);
+
               renderPhoto();
               break;
 
-            case "ArrowRight":
+            case 39:
               if (activeIndex >= photos.length - 1) {
                 activeIndex = 0;
               } else {
                 activeIndex++;
               }
-              console.log(activeIndex);
+
               renderPhoto();
               break;
+
             default:
+              break;
           }
+          e.stopImmediatePropagation();
         });
       }
     };
@@ -227,8 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const showSections = document.querySelectorAll("[data-showsection]");
 
   let indexOfSections = showSections.length;
-
-  console.log(indexOfSections);
 
   const fadeIn = () => {
     showSections.forEach((section, index) => {
