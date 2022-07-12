@@ -21,7 +21,8 @@ $section-paragraph-fz: 3rem;
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: $section-paragraph-fz;
 }

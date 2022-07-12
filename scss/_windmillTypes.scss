@@ -9,8 +9,8 @@
   }
 
   &__paragraph {
-    color: #fff;
     @include section-paragraph;
+    color: #fff;
   }
 
   &__photo {

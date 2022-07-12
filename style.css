@@ -582,7 +582,8 @@ a {
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
   color: #fff;
@@ -793,13 +794,14 @@ a {
   text-align: center;
 }
 .windmillTypes__paragraph {
-  color: #fff;
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
+  color: #fff;
 }
 .windmillTypes__photo {
   margin: 75px auto 50px;
@@ -1036,7 +1038,8 @@ a {
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
   margin-bottom: 30px;
@@ -1425,7 +1428,8 @@ a {
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
   color: #0354ab;
@@ -1710,7 +1714,8 @@ main .contact form .form__container textarea {
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
   margin-top: 10px;
@@ -1724,7 +1729,8 @@ main .contact form .form__container textarea {
   margin: 50px auto;
   width: 80%;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
+  word-break: normal;
   line-height: 130%;
   font-size: 3rem;
   margin-top: 10px;
